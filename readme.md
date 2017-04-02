@@ -64,12 +64,13 @@ It is assumed that if you are running on any Linux distribution you are familiar
     ```
 
 6. With the terminal (GIT Bash) window still open we now need to run composer to setup dependencies. This is important as otherwise your application will not work. Run the following commands in order:
- ```
- composer self-update
- composer install
- ```
+     
+     ```
+     composer self-update
+     composer install
+     ```
     
-    * Open the .env file with any text editor of your choice and edit the following entries within:
+* Open the .env file with any text editor of your choice and edit the following entries within:
    
     ```
     DB_CONNECTION=mysql
@@ -80,19 +81,21 @@ It is assumed that if you are running on any Linux distribution you are familiar
     DB_PASSWORD=<the password you gave that username>
     ```
     
-    * Save the .env file and close it
-    
-    * Now for migrating our database with relevant structure. Run the following command from the folder where your webapp is in. (DEFAULT is ``` c:\www\unreal_webapi ``` )
+* Save the .env file and close it
+
+* Now for migrating our database with relevant structure. Run the following command from the folder where your webapp is in. (DEFAULT is ``` c:\www\unreal_webapi ``` )
+
     ```
     php artisan migrate
     ```
-    
-    * Now we put some data into the users table. Run the following command from the folder where your webapp is.
+
+* Now we put some data into the users table. Run the following command from the folder where your webapp is.
+
     ```
     php artisan db:seed
     ```
-    
-    * data has now been filled into our users table and we are good to go to test 
+
+* data has now been filled into our users table and we are good to go to test 
 
 7. Now that we have installed dependencies and configured, we can extract the webserver into our ``` c:\nginx ``` folder. Open the ZIP file inside of ``` /setup_files ``` folder. Extract the contents of this file INTO the earlier created ``` c:\nginx ``` folder. 
 
