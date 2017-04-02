@@ -95,7 +95,7 @@ It is assumed that if you are running on any Linux distribution you are familiar
     php artisan db:seed
     ```
 
-* data has now been filled into our users table and we are good to go to test 
+* data has now been filled into our users table and we are good to go
 
 7. Now that we have installed dependencies and configured, we can extract the webserver into our ``` c:\nginx ``` folder. Open the ZIP file inside of ``` /setup_files ``` folder. Extract the contents of this file INTO the earlier created ``` c:\nginx ``` folder. 
 
