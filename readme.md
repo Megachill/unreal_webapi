@@ -69,28 +69,30 @@ It is assumed that if you are running on any Linux distribution you are familiar
  composer install
  ```
     
-    1. Open the .env file with any text editor of your choice and edit the following entries within:
-        ```
-        DB_CONNECTION=mysql
-        DB_HOST=127.0.0.1
-        DB_PORT=3306
-        DB_DATABASE=<the database name>
-        DB_USERNAME=<the user you created when configuring MySQL, normally root>
-        DB_PASSWORD=<the password you gave that username>
-        ```
-    2. Save the .env file and close it
+    * Open the .env file with any text editor of your choice and edit the following entries within:
+   
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=<the database name>
+    DB_USERNAME=<the user you created when configuring MySQL, normally root>
+    DB_PASSWORD=<the password you gave that username>
+    ```
     
-    3. Now for migrating our database with relevant structure. Run the following command from the folder where your webapp is in. (DEFAULT is ``` c:\www\unreal_webapi ``` )
+    * Save the .env file and close it
+    
+    * Now for migrating our database with relevant structure. Run the following command from the folder where your webapp is in. (DEFAULT is ``` c:\www\unreal_webapi ``` )
     ```
     php artisan migrate
     ```
     
-    4. Now we put some data into the users table. Run the following command from the folder where your webapp is.
+    * Now we put some data into the users table. Run the following command from the folder where your webapp is.
     ```
     php artisan db:seed
     ```
     
-    5. data has now been filled into our users table and we are good to go to test 
+    * data has now been filled into our users table and we are good to go to test 
 
 7. Now that we have installed dependencies and configured, we can extract the webserver into our ``` c:\nginx ``` folder. Open the ZIP file inside of ``` /setup_files ``` folder. Extract the contents of this file INTO the earlier created ``` c:\nginx ``` folder. 
 
