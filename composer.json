@@ -1,0 +1,37 @@
+{
+    "name": "megachill/unreal_webapi",
+    "description": "Unreal WebAPI Service for Reuben Ward's MySQL integration tutorial series",
+    "keywords": ["unrealwebapi"],
+    "license": "MIT",
+    "type": "project",
+    "author": "MegaChill",
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/lumen-framework": "5.4.*",
+        "vlucas/phpdotenv": "~2.2",
+        "tymon/jwt-auth": "^1.0.0"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
