@@ -163,6 +163,7 @@ http://localhost/auth/register
  Make a POST request to the following URL (please note the Bearer part this is important!)
 
  ```
+ url: http://localhost/auth/login
  ===HEADERS===
  key:Accept    value:application/json
  ===BODY=== (form-data)
@@ -192,10 +193,10 @@ http://localhost/auth/register
  Make a POST request with the users token to the following URL:
  
  ```
+ url: http://localhost/auth/logout
  ===HEADERS===
  key:Authorization value:Bearer <token we got from login / register>
 
- URL: http://localhost/auth/logout
  ```
  
  if successful we should receive a response like so: 
