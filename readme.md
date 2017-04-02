@@ -70,23 +70,22 @@ It is assumed that if you are running on any Linux distribution you are familiar
  ```
     
     1. Open the .env file with any text editor of your choice and edit the following entries within:
-    ```
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=<the database name>
-    DB_USERNAME=<the user you created when configuring MySQL, normally root>
-    DB_PASSWORD=<the password you gave that username>
-    ```
-    
-    2. Save the .env file and close it 
+        ```
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=<the database name>
+        DB_USERNAME=<the user you created when configuring MySQL, normally root>
+        DB_PASSWORD=<the password you gave that username>
+        ```
+    2. Save the .env file and close it
     
     3. Now for migrating our database with relevant structure. Run the following command from the folder where your webapp is in. (DEFAULT is ``` c:\www\unreal_webapi ``` )
     ```
     php artisan migrate
     ```
     
-    4. Now we put some data into the users table. Run the following command from the folder where your webapp is. 
+    4. Now we put some data into the users table. Run the following command from the folder where your webapp is.
     ```
     php artisan db:seed
     ```
