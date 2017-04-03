@@ -107,13 +107,31 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        $this->auth->invalidate($this->auth->getToken());
+
+        try {
+
+            $this->auth->invalidate($this->auth->getToken());
+
+        } catch (TokenExpiredException $e) {
+            return response()->json([
+                'error' => 'token_expired'
+            ], 500);
+        } catch (TokenInvalidException $e) {
+            return response()->json([
+                'error' => 'token_invalid'
+            ], 500);
+        } catch (JWTException $e) {
+            return response()->json([
+                'error' => 'unauthorized',
+                'message' => $e->getMessage(),
+            ], $e->getStatusCode());
+        }
+
+
         return response()->json([
             'message' => 'logout_success',
         ], 200);
 
-        /*$this->auth->invalidate($this->auth->getToken());
-        return response(null, 200);*/
     }
 
     /**
