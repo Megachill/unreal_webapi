@@ -187,7 +187,19 @@ http://localhost/auth/register
     }
   }
  ```
- 
+
+### members only section
+
+I have implemented a members only section so that you can test the system properly. You will only be granted access to this part of the web-service if your token is valid and you are logged in. In order to get to the members only part visit the following URL via a GET request with the headers as such:
+
+```
+url: http://localhost/members
+===headers===
+key: Authorization      value: Bearer <the token you got from login / register>
+```
+
+the Bearer part is important, without it nothing works. Example string would be ``` Bearer lsadko209asdkj23-cm32-0dsao9k23opkasdm ``` of course the token will be longer, this is just an example.
+
 ### logout
 
  Make a POST request with the users token to the following URL:
@@ -196,7 +208,6 @@ http://localhost/auth/register
  url: http://localhost/auth/logout
  ===HEADERS===
  key:Authorization value:Bearer <token we got from login / register>
-
  ```
  
  if successful we should receive a response like so: 
